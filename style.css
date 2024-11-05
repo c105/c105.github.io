@@ -1,0 +1,92 @@
+:root { --c1: #fff; --c2: #cdcdcd; --c3: #767676; --c4: #000;}
+.dark { --c1: #0f0f0f; --c2: #333; --c3: #898989; --c4: #ffffff;}
+a,body,html,ul { margin: 0; padding: 0; border: 0; cursor: default; color: var(--c4); text-decoration: none; font-family:
+'Roboto', sans-serif;}
+body, html { background-color: var(--c1); height: 100%; width: 100%; display: flex; justify-content: center; align-items: center; flex-direction: column; transition: background-color 0.3s, color 0.3s; font-family: "Roboto", sans-serif;
+overflow-y: hidden;}
+.fluid-width { flex: 1; height: 100%; width: 100%; display: flex;}
+.nav {justify-content: space-between; display: flex; height: 48px; padding: 5px; color: var(--c3); display: flex; align-items: center;}
+button i,li span, li img{
+cursor: pointer}
+button { background: none; color: var(--c4); border: none; font-size: 20px; padding: 10px; transition: color 0.3s, background-color 0.3s;}
+button:hover{ background-color: var(--c2); color: var(--c4);}
+.container { max-width: 960px;
+width: 100%; height: 100%}
+.hide{ display: hidden}
+/* main col */ .main { display: flex; height: 100%;}
+.col { padding: 0px; box-sizing: border-box; display: flex; align-items: top;}
+/* menu */ .menu { display: block; padding: 10px; min-width: 200px;}
+.menu.active { display: none;}
+li{ padding:5px}
+/* player */ #player { width: 100%; height: auto}
+._ac-button { background: none; border: 1px solid var(--c3); color: var(--c4); padding: 2px; width: 100%; text-align: left; cursor: pointer; font-size: 16px; transition:
+background-color 0.3s;}
+select option { background-color: var(--c1); color: var(--c4);}
+/* Card styles */ .card { display: flex; border-radius: 8px; cursor: pointer;}
+.thumbnail-container { width: 40px; height: 40px; overflow: hidden;}
+.thumbnail
+{ width: 100%; height: 100%; object-fit: cover;}
+.text-container { max-width: calc(100% - 40px); padding-left: 5px;}
+.channel-name, .channel-info { display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+.channel-info { color:
+var(--c3);}
+ul li:hover { background-color: var(--c2);}
+.menu { width: 200px;}
+._ac-button { margin-bottom: 5px;}
+footer { color: var(--c3); font-size: 15px; padding:
+15px; margin-top: 15px; border-top: 1px solid var(--c2);}
+/* Webkit browsers */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;}
+::-webkit-scrollbar-track {
+    background: var(--c1);}
+::-webkit-scrollbar-thumb {
+    background: var(--c2);
+    border-radius: 10px;}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--c3);}
+/* Firefox */
+.scrollable-element {
+    scrollbar-width: thin;
+    scrollbar-color: var(--c2) var(--c1);}
+#media {
+        order: 2; /* Move media to the first position */}
+#menu {
+        order: 1; /* Move menu to the second position, which will place it below media */}
+._ac-content {overflow-y: scroll;height: calc(100vh  - 100px)}
+@media (max-width: 768px) {
+    html, body {
+        display: flex;
+		overflow: auto;
+        flex-direction: column; /* Change to column to stack elements vertically */}
+.main {
+        flex-direction: column; /* Stack the main elements vertically */
+        height: auto; /* Allow main to adjust its height */}
+#media {
+        order: 1; /* Move media to the first position */
+        width: 100%; /* Full width for media */
+        clear: both;}
+#menu {
+        order: 2; /* Move menu to the second position, which will place it below media */
+        width: 100%; /* Full width for the menu */
+        clear: both;}
+footer {
+        text-align: center; /* Center the footer text */
+        padding: 10px; /* Add some padding to the footer */}
+._ac-content {overflow-y: hidden;height: auto}
+
+    .fixed {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+
+div #media {
+	  position: sticky;
+	  top: 0;
+	  font-size: 20px;
+	  background-color: var(--c1)
+	}
