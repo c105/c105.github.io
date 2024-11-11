@@ -1,0 +1,18 @@
+<link rel="stylesheet" href="https://cdn.vidstack.io/player/theme.css" />
+<link rel="stylesheet" href="https://cdn.vidstack.io/player/video.css" />
+
+<div id="target"></div>
+
+<script type="module">
+  import { VidstackPlayer, VidstackPlayerLayout } from 'https://cdn.vidstack.io/player';
+
+  const player = await VidstackPlayer.create({
+    target: '#target',
+    title: 'HBO',
+    src: 'https://cors-anywhere.herokuapp.com/https://tgaadi-web.tech/stalker/Jio-be.php?tv\=1106',
+    poster: 'https://files.vidstack.io/sprite-fight/poster.webp',
+    layout: new VidstackPlayerLayout({
+      thumbnails: 'https://files.vidstack.io/sprite-fight/thumbnails.vtt',
+    }),
+  });
+</script>
